@@ -1,15 +1,14 @@
 package com.bridgelabz;
 public class SnakeAndLadder {
-
     static final int LADDER = 1;
     static final int SNAKE = 2;
     static final int NO_PLAY = 0;
-    public static void main (String[]args){
+    static int die = 0;
+
+    public static void main(String[] args) {
         System.out.println("Welcome to Snake and Ladder Game !");
         int Position = 0;
-        while(Position< 100)
-
-        {
+        while (Position < 100) {
             int dice = (int) (Math.random() * 10) % 6 + 1;
             System.out.println("dice " + dice);
             int OptionCheck = (int) (Math.random() * 10) % 3;
@@ -31,8 +30,9 @@ public class SnakeAndLadder {
             if (Position < 0) {
                 Position = 0;
             }
-
             System.out.println("Position " + Position);
+            die++;
         }
+        System.out.println("Total number of times die rolled " + die);
     }
 }
